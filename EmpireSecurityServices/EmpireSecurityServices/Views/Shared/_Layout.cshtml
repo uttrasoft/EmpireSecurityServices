@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/skypejs")
+</head>
+<body id="wrapper">
+    <div class="" style="margin: 0 auto;position: relative;">
+        <img style="width: 100%;min-height: 500px;" class="bc2" src="/Images/security_cover.jpg">
+        <div style="text-align: center;text-align: center;position: absolute;width: 100%;top: 0px;height: 100%;">
+            <header>
+                <nav>
+                    <div class="wrapper-inner text-center">
+                        <div class="header home" id="header">
+                            <div class="myrow clearfix" style="padding-bottom: 24px;">
+                                <div class="three columns logo-container" style="text-align: left;">
+                                    <a href="index.php"><img src="~/Images/ESSLOGO2.png" width="150" alt="Empire Security Services" style="border-radius: 5px;"></a>
+                                </div>
+                                <div class="nine columns toggle-jump main-nav" style="padding-top: 12px;">
+                                    <ul class="nav right">
+                                        <li class="pricing"><a href="@Url.Action("About","Home")">ABOUT US</a></li>
+                                        <li class="pricing"><a href="@Url.Action("Career","Home")">CAREER</a></li>
+                                        <li class="pricing"><a href="@Url.Action("Services","Home")">SERVICES</a></li>
+                                        <li class="sign-up"><a href="@Url.Action("Contact","Home")" class="btn btn-raised">CONTACT US</a></li>
+                                        <li class="sign-up" style="background: #3E3A3A;border-radius: 3px;"><a href="https://www.facebook.com/EssActCanberra" target="_blank" class="" style="padding: 0;display: block;border-radius: 7px;"><img src="~/Images/facebook-con.png" style="height: 41px;margin-right: 8px;"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div style="margin-top: 50px;text-align:center;">
+                <h1 style="color: #fff">Securing Your Business is Our Business</h1>
+                <p style="color: rgba(255, 255, 255, 0.48);width: 47%;text-align: center;margin: 0 auto;padding-top: 10px;">We pride ourselves on being very different from standard security providers. The difference is in the quality of the people we employ.</p>
+                <br><br>
+                <a href="" class="btn btn-raised" style="background: rgb(191,191,191) !important;width: 125px;">MORE</a>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+            @RenderBody()
+            <footer style="text-align:center;">
+                @Html.Partial("Footer")
+           </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(".tabs-menu a").click(function (event) {
+            event.preventDefault();
+            $(this).parent().addClass("current");
+            $(this).parent().siblings().removeClass("current");
+            var tab = $(this).attr("href");
+            $(".tab-content").not(tab).css("display", "none");
+            $(tab).fadeIn();
+            $(".tabs-menu a").attr("class", "");
+            $(this).attr("class", "currentSelect");
+        });
+    });
+</script>
