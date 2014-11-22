@@ -1543,3 +1543,37 @@ margin: 0 auto;
 .two{
    width: 173.333px;
 }
+
+.input-group
+{
+    line-height : 30px;
+}
+
+.input-group label
+{
+    width:100px;
+    text-align : center;
+    font-size : 14px;
+    font-weight : normal;
+}
+
+
+.input-group input[type="text"]
+{
+    width : 220px;
+    vertical-align : middle;
+    text-indent : 2px;
+}
+
+.input-group textarea
+{
+    width : 220px;
+    text-indent : 2px;
+    margin-bottom : 10px;
+
+}
+
+.input-group input[type="file"]
+{
+    width : 220px;
+}

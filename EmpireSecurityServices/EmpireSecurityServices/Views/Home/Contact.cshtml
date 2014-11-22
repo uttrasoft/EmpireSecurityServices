@@ -1,4 +1,6 @@
-﻿    <div style="background: #ECF0F1;">
+﻿@model EmpireSecurityServices.Models.Contact
+
+    <div style="background: #ECF0F1;">
         <div class="section myrow">
             <div class="mid">
                 <h1 style="font-weight: normal">Contact</h1>
@@ -8,7 +10,7 @@
     </div>
     <div class="section myrow" style="padding-top: 0px;">
         <div class="clearfix">
-            <h2 class="ind1 textCenterAlign" style="border-bottom: 1px solid #E6E6E6;padding-top: 60px;padding-bottom: 30px;">Contact</h2>
+            <h2 class="ind1 textCenterAlign" style="border-bottom: 1px solid #E6E6E6;padding-top: 30px;padding-bottom: 30px;">Contact</h2>
             <div class="four fl">
                 <div class="textCenterAlign padBottom20">
                     <strong>Canberra</strong><br>
@@ -25,19 +27,35 @@
             <div class="marginAutoCenter padTop50 fr six" style="">
                 <div class="marginAutoCenter padTop15" style="">
                     <p style="padding-top: 0px;margin-top:0px;">To find out more about Empire Security Services or to get a quick quote fill in this form and one of our friendly experts will respond to your query shortly.</p>
-                    <form id="form" class="textCenterAlign" method="post">
-                        <label class="name"><input type="text" name="your-name" placeholder="Name"></label><br><br>
-                        <label class="email"><input type="text" name="your-email" placeholder="E-mail"></label><br><br>
-                        <label class="phone"><input type="tel" name="ph" placeholder="Phone"></label><br><br>
-                        <label class="message"><textarea name="your-message" placeholder="Message"></textarea></label>
-                        <div class="clear"></div>
-                        <div style="padding-top: 15px;">
-                            <div class="msg" style="color: red;"><br><br></div>
-                            <input type="submit" class="btn btn-raised submitContact" style="width: 150px;color:#fff;height: 50px;" value="SEND">
+                    @using (@Html.BeginForm("Contact", "Home", FormMethod.Post, new { @id = "Contactform", @enctype = "multipart/form-data", @class = "textCenterAlign" }))
+                    {
+                        @*@Html.ValidationSummary()*@
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.Name)
+                            @Html.TextBoxFor(m => m.Name)
+                            @Html.ValidationMessageFor(m => m.Name)
                         </div>
-                    </form>
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.EmailAddress)
+                            @Html.TextBoxFor(m => m.EmailAddress)
+                            @Html.ValidationMessageFor(m => m.EmailAddress)
+                        </div>
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.ContactNo)
+                            @Html.TextBoxFor(m => m.ContactNo)
+                            @Html.ValidationMessageFor(m => m.ContactNo)
+                        </div>
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.Message)
+                            @Html.TextAreaFor(m => m.Message)
+                            @Html.ValidationMessageFor(m => m.Message)
+                        </div>
+
+                        <div style="padding-top: 15px; margin-left:103px;">
+                         <input type="submit" class="btn btn-raised submitContact" style="width: 150px;color:#fff;height: 30px;" value="SEND">
+                        </div>
+                    }
                 </div>
             </div>
         </div>
     </div>
-@*<div class="skype_c2c_menu_container notranslate" id="skype_c2c_menu_container" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" data-fp="{5140D077-5297-43D4-BCAC-B8B0D1B47241}" data-murl="https://pipe.skype.com/Client/2.0/" data-uiid="0" style="display: none;"><div class="skype_c2c_menu_click2call"><a class="skype_c2c_menu_click2call_action" id="skype_c2c_menu_click2call_action" target="_self">Call</a></div><div class="skype_c2c_menu_click2sms"><a class="skype_c2c_menu_click2sms_action" id="skype_c2c_menu_click2sms_action" target="_self">Send SMS</a></div><div class="skype_c2c_menu_add2skype"><a class="skype_c2c_menu_add2skype_text" id="skype_c2c_menu_add2skype_text" target="_self">Add to Skype</a></div><div class="skype_c2c_menu_toll_info"><span class="skype_c2c_menu_toll_callcredit">You'll need Skype Credit</span><span class="skype_c2c_menu_toll_free">Free via Skype</span></div></div>*@

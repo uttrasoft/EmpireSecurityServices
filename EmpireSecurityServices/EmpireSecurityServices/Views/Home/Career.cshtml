@@ -1,4 +1,5 @@
-﻿    <div class="section myrow" style="padding-top: 0px;">
+﻿@model EmpireSecurityServices.Models.Resume  
+  <div class="section myrow" style="padding-top: 0px;">
         <div class="clearfix">
             <h2 class="ind1 textCenterAlign" style="border-bottom: 1px solid #E6E6E6;padding-top: 60px;padding-bottom: 30px;">Career</h2>
             <div class="seven fl">
@@ -21,19 +22,38 @@
             <div class="marginAutoCenter padTop50 fr four" style="">
                 <div class="marginAutoCenter padTop15" style="">
                     <p style="padding-top: 0px;margin-top:0px;">Please fill in the form and attach your resume if you are interested about working for Empire Security Services.</p>
-                    <form id="form" class="textCenterAlign" method="post" enctype="multipart/form-data">
-                        <label class="name"><input type="text" value="" name="your-name" placeholder="Name"></label><br><br>
-                        <label class="email"><input type="text" value="" name="your-email" placeholder="E-mail"></label><br><br>
-                        <label class="phone"><input type="tel" value="" name="ph" placeholder="Phone"></label><br><br>
-                        <label class="message"><textarea value="fff" name="your-message" placeholder="Cover Letter"></textarea></label><br><br>
-                        <div style="padding-bottom: 5px;">Upload your CV</div>
-                        <label class="file"><input type="file" name="attachment"></label>
-                        <div class="clear"></div>
-                        <div style="padding-top: 15px;">
-                            <div class="msg" style="color: red;"><br><br></div>
-                            <input type="submit" class="btn btn-raised submitContact" id="sendCareerBtn" style="width: 150px;color:#fff;height: 50px;" value="SUBMIT">
+                    @using (@Html.BeginForm("Career", "Home", FormMethod.Post, new { @id = "Careerform", @enctype = "multipart/form-data", @class = "textCenterAlign" }))
+                    {
+                        @*@Html.ValidationSummary()*@
+
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.Name)
+                            @Html.TextBoxFor(m => m.Name)
+                            @Html.ValidationMessageFor(m => m.Name)
                         </div>
-                    </form>
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.EmailAddress)
+                            @Html.TextBoxFor(m => m.EmailAddress)
+                            @Html.ValidationMessageFor(m => m.EmailAddress)
+                        </div>
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.ContactNo)
+                            @Html.TextBoxFor(m => m.ContactNo)
+                            @Html.ValidationMessageFor(m => m.ContactNo)
+                        </div>
+                        <div class="input-group">
+                            @Html.LabelFor(m => m.CoverLetter)
+                            @Html.TextAreaFor(m => m.CoverLetter)
+                            @Html.ValidationMessageFor(m => m.CoverLetter)
+                        </div>
+                        <div class="input-group">
+                            <input type="file" name="attachment" style="margin-left:103px;">
+                        </div>
+                        <div style="padding-top:15px;margin-left:103px;">
+                            <div class="msg" style="color: red;"></div>
+                            <input type="submit" class="btn btn-raised submitContact" id="sendCareerBtn" style="width: 150px;color:#fff;height: 30px;" value="SUBMIT">
+                        </div>
+                    }
                 </div>
             </div>
         </div>
