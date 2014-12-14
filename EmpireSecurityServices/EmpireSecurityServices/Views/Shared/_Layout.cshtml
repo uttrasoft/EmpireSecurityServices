@@ -9,61 +9,163 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/skypejs")
+    @Scripts.Render("~/bundles/jquerui")
+    <script type="text/javascript">
+        function slideSwitch() {
+            var $active = $('#slideshow IMG.active');
+            if ($active.length == 0) $active = $('#slideshow IMG:last');
+            var $next = $active.next().length ? $active.next()
+                : $('#slideshow IMG:first');
+            $active.addClass('last-active');
+
+            $next.css({ opacity: 0.0 })
+                .addClass('active')
+                .animate({ opacity: 1.0 }, 1000, function () {
+                    $active.removeClass('active last-active');
+                });
+        }
+        $(function () {
+            setInterval("slideSwitch()", 5000);
+        });
+    </script>
+
+
+    <!-----page scroll smooth----->
+    <script>
+        if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+        window.onmousewheel = document.onmousewheel = wheel;
+
+        function wheel(event) {
+            var delta = 0;
+            if (event.wheelDelta) delta = event.wheelDelta / 120;
+            else if (event.detail) delta = -event.detail / 3;
+
+            handle(delta);
+            if (event.preventDefault) event.preventDefault();
+            event.returnValue = false;
+        }
+
+        function handle(delta) {
+            var time = 1000;
+            var distance = 300;
+
+            $('html, body').stop().animate({
+                scrollTop: $(window).scrollTop() - (distance * delta)
+            }, time);
+        }
+    </script>
+    <!----Bottom to Top---->
+    <link rel="stylesheet" media="screen,projection" href="~/Content/ui.totop.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
 </head>
-<body id="wrapper">
-    <div class="" style="margin: 0 auto;position: relative;">
-        <img style="width: 100%;min-height: 500px;" class="bc2" src="/Images/security_cover.jpg">
-        <div style="text-align: center;text-align: center;position: absolute;width: 100%;top: 0px;height: 100%;">
-            <header>
-                <nav>
-                    <div class="wrapper-inner text-center">
-                        <div class="header home" id="header">
-                            <div class="myrow clearfix" style="padding-bottom: 24px;">
-                                <div class="three columns logo-container" style="text-align: left;">
-                                    <a href="index.php"><img src="~/Images/ESSLOGO2.png" width="150" alt="Empire Security Services" style="border-radius: 5px;"></a>
-                                </div>
-                                <div class="nine columns toggle-jump main-nav" style="padding-top: 12px;">
-                                    <ul class="nav right">
-                                        <li class="pricing"><a href="@Url.Action("About","Home")">ABOUT US</a></li>
-                                        <li class="pricing"><a href="@Url.Action("Career","Home")">CAREER</a></li>
-                                        <li class="pricing"><a href="@Url.Action("Services","Home")">SERVICES</a></li>
-                                        <li class="sign-up"><a href="@Url.Action("Contact","Home")" class="btn btn-raised">CONTACT US</a></li>
-                                        <li class="sign-up" style="background: #3E3A3A;border-radius: 3px;"><a href="https://www.facebook.com/EssActCanberra" target="_blank" class="" style="padding: 0;display: block;border-radius: 7px;"><img src="~/Images/facebook-con.png" style="height: 41px;margin-right: 8px;"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            <div style="margin-top: 50px;text-align:center;">
-                <h1 style="color: #fff">Securing Your Business is Our Business</h1>
-                <p style="color: rgba(255, 255, 255, 0.48);width: 47%;text-align: center;margin: 0 auto;padding-top: 10px;">We pride ourselves on being very different from standard security providers. The difference is in the quality of the people we employ.</p>
-                <br><br>
-                <a href="" class="btn btn-raised" style="background: rgb(191,191,191) !important;width: 125px;">MORE</a>
+<body>
+    <div id="container">
+        <div class="menu">
+            <div class="navigation">
+                <ul id="nav-one">
+                    <li>
+                        <a class="active" href="@Url.Action("Index","Home")">Home</a>
+                        <audio id="beep-one" controls preload="auto">
+                            <source src="audio/beep.mp3">
+                            <source src="audio/beep.ogg">
+                            Your browser isn't invited for super fun time.
+                        </audio>
+                    </li>
+                    <li><a href="@Url.Action("About","Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Career","Home")">Career</a></li>
+                    <li><a href="@Url.Action("Services","Home")">Services</a></li>
+                    <li><a href="@Url.Action("StretgySummary", "Home")">Strategy &amp; Summary</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                </ul>
+               </div>
+        </div>
+        <div id="header">
+            <div class="header">
+                <div class="logo"><a href="#"><img src="~/images/ESSLOGO2.png" alt="" /></a></div>
+                <div>
+                    <p><img src="~/images/phone_icon.png" alt="" />+61426479711, +61425454253</p>
+                    <p><img src="~/images/email_icon.png" alt="" />info@empiresecurityservices.com.au</p>
+                    <p><img src="~/images/fax_icon.png" alt="" />+61(0)261470365</p>
+                </div>
+            </div>
+        </div>
+        <div id="slideshow">
+            <img src="~/images/security_cover.jpg" alt="Slideshow Image 1" class="active" />
+            <img src="~/images/security_cover2.jpg" alt="Slideshow Image 2" />
+            <img src="~/images/security_cover3.jpg" alt="Slideshow Image 3" />
+            <img src="~/images/security_cover4.jpg" alt="Slideshow Image 4" />
+        </div>
+        <div id="banner">
+            <div class="banner_text">
+                <h2>Securing Your Business is Our Business</h2>
+                <p>We pride ourselves on being very different from standard security providers. The difference is in the quality of the people we employ.</p>
+                <a href="@Url.Action("About","Home")"><i>More Info</i><i class="active">+</i></a>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+
+        <div id="bottom_area">
+            <div class="bottom_area">
+                <h2>What our clients are saying</h2>
+                <p>ASIAL is the largest security industry Association representing the security industry in Australia.</p>
+                <div class="client_box">
+                    <div class="pix"><img src="~/images/TestimonalFace1.png" alt="" /></div>
+                    <div class="heading"><h2>Vanessa</h2><p>Student</p></div>
+                    <div class="text">We used empire security for birthday party and their security team took extra care to maintain a friendly environment throughout the event.</div>
+                </div>
+                <div class="client_box">
+                    <div class="pix"><img src="~/images/TestimonalFace2.png" alt="" /></div>
+                    <div class="heading"><h2>Sonika Kaliraman</h2><p>Accountant</p></div>
+                    <div class="text">Their service is excellent and all their staff are courteous and conscientious in carrying out their duties.Personnel are punctual and provide us with the excellent report.</div>
+                </div>
+                <div class="client_box">
+                    <div class="pix"><img src="~/images/TestimonalFace3.png" alt="" /></div>
+                    <div class="heading"><h2>Javad Babaei</h2><p>Information Technology</p></div>
+                    <div class="text">We are very satisfied with the level of care and professional services they have providing and we will continue to use Empire Security Services on further events.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="last_footer">
+            <div class="last_footer">
+                <strong>Verified by security Associations in Australia</strong>
+                <p>ASIAL is the largest security industry Association representing the security industry in Australia.</p>
+                <div class="contact1">
+                    <b>228 Kerrigan St, Dunlop, Canberra, ACT 2615</b><br />
+                    <b>Phone:</b> +61426479711, +61425454253<br />
+                    <b>Email:</b> info@empiresecurityservices.com.au<br />
+                    <b>Fax:</b> +61(0)261470365<br />
+                    <b>ABN:</b> 75601706156<br />
+                    <b>ACT MASTER LICENSE:</b> 17502305
+                </div>
+                <div class="contact2"><a href="#"><img src="~/images/map.png" alt="" /></a></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer">
+                <p>EMPIRE SECURITY SERVICES © 2014 All rights reserved</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/EssActCanberra" target="_blank" title="Facebook"><img src="~/images/social/facebook.png" alt="" /></a></li>
+                    <li><a href="#"><img src="~/images/social/twitter.png" alt="" /></a></li>
+                    <li><a href="#"><img src="~/images/social/googleplus.png" alt="" /></a></li>
+                    <li><a href="#"><img src="~/images/social/linkedin.png" alt="" /></a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-            @RenderBody()
-            <footer style="text-align:center;">
-                @Html.Partial("Footer")
-           </footer>
-    </div>
-    @RenderSection("scripts", required: false)
 </body>
 </html>
 <script>
-    $(document).ready(function () {
-        $(".tabs-menu a").click(function (event) {
-            event.preventDefault();
-            $(this).parent().addClass("current");
-            $(this).parent().siblings().removeClass("current");
-            var tab = $(this).attr("href");
-            $(".tab-content").not(tab).css("display", "none");
-            $(tab).fadeIn();
-            $(".tabs-menu a").attr("class", "");
-            $(this).attr("class", "currentSelect");
+    var beepOne = $("#beep-one")[0];
+    $("#nav-one a")
+        .mouseenter(function () {
+            beepOne.play();
         });
-    });
 </script>

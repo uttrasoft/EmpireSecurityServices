@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+}
+
+<div>
+
+    
+        @{
+            if(ViewBag.pageType == "Career")
+            {
+                <h2 style="color:red;"> Thanks for your interest in Empire Security Services.</h2>
+                <h3>Your Resume has been submitted successfully.!</h3>
+                <p>You will get a confirmation e-mail shortly.</p>
+
+            }
+            else
+            {
+                <h2 style="color:red;"> Thanks for your interest in Empire Security Services.</h2>
+                <h3>Your Query has been submitted successfully.!</h3>
+                <p>You will get a confirmation e-mail shortly.</p>
+            }
+        }
+    
+    <div>
+        <a href="@Url.Action("Index","Home")">Goto home page</a>
+    </div>
+</div>

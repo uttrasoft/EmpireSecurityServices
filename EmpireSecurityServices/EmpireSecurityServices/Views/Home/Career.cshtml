@@ -1,60 +1,35 @@
-﻿@model EmpireSecurityServices.Models.Resume  
-  <div class="section myrow" style="padding-top: 0px;">
-        <div class="clearfix">
-            <h2 class="ind1 textCenterAlign" style="border-bottom: 1px solid #E6E6E6;padding-top: 60px;padding-bottom: 30px;">Career</h2>
-            <div class="seven fl">
-                <p>Empire Security Services understands that a skilled and responsible workforce plays a major part in improving performance and achieving quality outputs.</p>
-                <p>Empire Security Services is constantly assessing the best means of developing and implementing suitable training programs for our employees, this is done in order to enhance their overall motivation levels, commitment and levels of retention.</p>
-                <p>We also aim to help each Security Officer take full advantage of all professional opportunities that are available and to take steps to eliminate any threats to their career and operational effectiveness.</p>
-                <p>We provide staff with particular skills and training in a number of security-related areas, including:</p>
-                <div class="entry">
-                    <ul style="text-align: left;">
-                        <li>Static Guard</li>
-                        <li>Crowd Control</li>
-                        <li>Mobile Patrolling</li>
-                        <li>Event Security</li>
-                        <li>Birthday Parties</li>
-                        <li>Construction site Security </li>
-                        <li>Loss Prevention</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="marginAutoCenter padTop50 fr four" style="">
-                <div class="marginAutoCenter padTop15" style="">
-                    <p style="padding-top: 0px;margin-top:0px;">Please fill in the form and attach your resume if you are interested about working for Empire Security Services.</p>
-                    @using (@Html.BeginForm("Career", "Home", FormMethod.Post, new { @id = "Careerform", @enctype = "multipart/form-data", @class = "textCenterAlign" }))
-                    {
-                        @*@Html.ValidationSummary()*@
-
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.Name)
-                            @Html.TextBoxFor(m => m.Name)
-                            @Html.ValidationMessageFor(m => m.Name)
-                        </div>
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.EmailAddress)
-                            @Html.TextBoxFor(m => m.EmailAddress)
-                            @Html.ValidationMessageFor(m => m.EmailAddress)
-                        </div>
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.ContactNo)
-                            @Html.TextBoxFor(m => m.ContactNo)
-                            @Html.ValidationMessageFor(m => m.ContactNo)
-                        </div>
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.CoverLetter)
-                            @Html.TextAreaFor(m => m.CoverLetter)
-                            @Html.ValidationMessageFor(m => m.CoverLetter)
-                        </div>
-                        <div class="input-group">
-                            <input type="file" name="attachment" style="margin-left:103px;">
-                        </div>
-                        <div style="padding-top:15px;margin-left:103px;">
-                            <div class="msg" style="color: red;"></div>
-                            <input type="submit" class="btn btn-raised submitContact" id="sendCareerBtn" style="width: 150px;color:#fff;height: 30px;" value="SUBMIT">
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
+﻿@model EmpireSecurityServices.Models.Resume
+<div class="inner_page">
+    <strong class="heading"><img src="~/images/career.png" />&nbsp;Career</strong>
+    <p>Empire Security Services understands that a skilled and responsible workforce plays a major part in improving performance and achieving quality outputs.</p>
+    <p>Empire Security Services is constantly assessing the best means of developing and implementing suitable training programs for our employees, this is done in order to enhance their overall motivation levels, commitment and levels of retention.</p>
+    <p>We also aim to help each Security Officer take full advantage of all professional opportunities that are available and to take steps to eliminate any threats to their career and operational effectiveness.</p>
+    <div class="line"></div>
+    <p>We provide staff with particular skills and training in a number of security-related areas, including:</p>
+    <ul>
+        <li>tatic Guard</li>
+        <li>Crowd Control</li>
+        <li>Mobile Patrolling</li>
+        <li>Event Security</li>
+        <li>Birthday Parties</li>
+        <li>Construction site Security</li>
+        <li>Loss Prevention</li>
+    </ul>
+</div>
+<div class="inner_page2">
+    <p>Please fill in the form and attach your resume if you are interested about working for Empire Security Services.</p>
+    <table>
+        <tr>
+            <td>Name:<br />@Html.TextBoxFor(m => m.Name)</td>
+            <td>Email:<br />@Html.TextBoxFor(m => m.EmailAddress)</td>
+        </tr>
+        <tr>
+            <td>Phone:<br />@Html.TextBoxFor(m => m.ContactNo)</td>
+            <td>Cover Latter:<br />@Html.TextAreaFor(m => m.CoverLetter)</td>
+        </tr>
+        <tr>
+            <td>Upload your CV:<br /><input type="file" /></td>
+            <td><input type="button" value="Submit" /></td>
+        </tr>
+    </table>
+</div>

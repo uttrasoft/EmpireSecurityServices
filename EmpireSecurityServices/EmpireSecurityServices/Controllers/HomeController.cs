@@ -39,21 +39,24 @@ namespace EmpireSecurityServices.Controllers
             {
                 MailMessage mail = new MailMessage();
                 mail.To.Add(model.EmailAddress);
-                mail.From = new MailAddress("pramodbhatt.it@gmail.com");
                 mail.Subject = "New Contact Us Query";
                 string Body = model.Message;
                 mail.Body = Body;
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
-                smtp.Send(mail);
-
-                return View("Index", "Home");
+                try
+                {
+                    smtp.Send(mail);
+                    return RedirectToAction("Success", "Response", new { pageType = "Contact" });
+                }
+                catch(Exception ex)
+                {
+                    return RedirectToAction("Failure", "Response");
+                }
+               
             }
-            else
-            {
-                return View();
-            }
 
+            return View();
         }
 
         public ActionResult Services()
@@ -88,17 +91,22 @@ namespace EmpireSecurityServices.Controllers
                         string fileName = Path.GetFileName(attachment.FileName);
                         mail.Attachments.Add(new Attachment(attachment.InputStream, fileName));
                     }
-                    mail.IsBodyHtml = false;
+                    mail.IsBodyHtml = true;
                     SmtpClient smtp = new SmtpClient();
                     smtp.Send(mail);
                     ViewBag.Message = "Sent";
-                    return View("Index", "Home");
+                    return RedirectToAction("Success", "Response", new { pageType="Career"});
                 }
             }
             else
             {
-                return View();
+                return RedirectToAction("Failure", "Response");
             }
+        }
+
+        public ActionResult StretgySummary()
+        {
+            return View();
         }
     }
 }

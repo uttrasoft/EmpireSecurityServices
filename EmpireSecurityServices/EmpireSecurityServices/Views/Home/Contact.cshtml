@@ -1,61 +1,69 @@
 ﻿@model EmpireSecurityServices.Models.Contact
 
-    <div style="background: #ECF0F1;">
-        <div class="section myrow">
-            <div class="mid">
-                <h1 style="font-weight: normal">Contact</h1>
-                <h3 style="font-weight: normal">Thank you for your interest in Empire Security Services.</h3>
-            </div>
-        </div>
-    </div>
-    <div class="section myrow" style="padding-top: 0px;">
-        <div class="clearfix">
-            <h2 class="ind1 textCenterAlign" style="border-bottom: 1px solid #E6E6E6;padding-top: 30px;padding-bottom: 30px;">Contact</h2>
-            <div class="four fl">
-                <div class="textCenterAlign padBottom20">
-                    <strong>Canberra</strong><br>
-                    <p>
-                        228 Kerrigan Street<br>Dunlop, ACT 2615<br>
-                        Canberra, Australia<br>
-                        <strong>Phone:</strong> <span class="skype_c2c_print_container notranslate">+61 426 479 711</span><span id="skype_c2c_container" class="skype_c2c_container notranslate" dir="ltr" tabindex="-1" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" onclick="SkypeClick2Call.MenuInjectionHandler.makeCall(this, event)" data-numbertocall="+61426479711" data-isfreecall="false" data-isrtl="false" data-ismobile="false"><span class="skype_c2c_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_c2c_textarea_span" id="non_free_num_ui"><img width="0" height="0" class="skype_c2c_logo_img" src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/call_skype_logo.png"><span class="skype_c2c_text_span">+61 426 479 711</span><span class="skype_c2c_free_text_span"></span></span></span></span>, <span class="skype_c2c_print_container notranslate">+61 425 454 253</span><span id="skype_c2c_container" class="skype_c2c_container notranslate" dir="ltr" tabindex="-1" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" onclick="SkypeClick2Call.MenuInjectionHandler.makeCall(this, event)" data-numbertocall="+61425454253" data-isfreecall="false" data-isrtl="false" data-ismobile="false"><span class="skype_c2c_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_c2c_textarea_span" id="non_free_num_ui"><img width="0" height="0" class="skype_c2c_logo_img" src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/call_skype_logo.png"><span class="skype_c2c_text_span">+61 425 454 253</span><span class="skype_c2c_free_text_span"></span></span></span></span><br>
-                        <strong>Fax</strong> +61 (0)2 6147 0365<br>
-                        <strong>Email:</strong><a style="text-decoration: none;color: inherit;" href="mailtio:info@empiresecurityservices.com.au">info@empiresecurityservices.com.au</a>
-                    </p>
+<div class="inner_page">
+    <strong class="heading"><img src="~/images/contact.png" />&nbsp;Contact Us</strong>
 
-                </div>
-            </div>
-            <div class="marginAutoCenter padTop50 fr six" style="">
-                <div class="marginAutoCenter padTop15" style="">
-                    <p style="padding-top: 0px;margin-top:0px;">To find out more about Empire Security Services or to get a quick quote fill in this form and one of our friendly experts will respond to your query shortly.</p>
-                    @using (@Html.BeginForm("Contact", "Home", FormMethod.Post, new { @id = "Contactform", @enctype = "multipart/form-data", @class = "textCenterAlign" }))
-                    {
-                        @*@Html.ValidationSummary()*@
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.Name)
-                            @Html.TextBoxFor(m => m.Name)
-                            @Html.ValidationMessageFor(m => m.Name)
-                        </div>
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.EmailAddress)
-                            @Html.TextBoxFor(m => m.EmailAddress)
-                            @Html.ValidationMessageFor(m => m.EmailAddress)
-                        </div>
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.ContactNo)
-                            @Html.TextBoxFor(m => m.ContactNo)
-                            @Html.ValidationMessageFor(m => m.ContactNo)
-                        </div>
-                        <div class="input-group">
-                            @Html.LabelFor(m => m.Message)
-                            @Html.TextAreaFor(m => m.Message)
-                            @Html.ValidationMessageFor(m => m.Message)
-                        </div>
-
-                        <div style="padding-top: 15px; margin-left:103px;">
-                         <input type="submit" class="btn btn-raised submitContact" style="width: 150px;color:#fff;height: 30px;" value="SEND">
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
+    <div class="contact1">
+        <b>228 Kerrigan St, Dunlop, Canberra, ACT 2615</b><br />
+        <b>Phone:</b> +61426479711, +61425454253<br />
+        <b>Email:</b> info@empiresecurityservices.com.au<br />
+        <b>Fax:</b> +61(0)261470365<br />
+        <b>ABN:</b> 75601706156<br />
+        <b>ACT MASTER LICENSE:</b> 17502305
     </div>
+    <div class="contact2"><a href="#"><img src="~/images/map.png" alt="" /></a></div>
+
+    <table class="contact_table">
+        <tr>
+            <th colspan="2">EMPIRE SECURITY SERVICES (PTY) LTD.</th>
+        </tr>
+        <tr>
+            <td><strong>Physical Address:</strong></td>
+            <td>PO Box 467, Kip pax, ACT 2615</td>
+        </tr>
+        <tr>
+            <td><strong>Postal Address:</strong></td>
+            <td>PO Box 467, Kip pax, ACT 2615</td>
+        </tr>
+        <tr>
+            <td><strong>Telephone Number:</strong></td>
+            <td>0426 479 711, 0425 454 253, <i>Number is operational</i></td>
+        </tr>
+        <tr>
+            <td><strong>Fax Number:</strong></td>
+            <td>02 6147 0365</td>
+        </tr>
+        <tr>
+            <td><strong>E-Mail Address:</strong></td>
+            <td><a href="mailto:info@empiresecurityservices.com.au">info@empiresecurityservices.com.au</a></td>
+        </tr>
+        <tr>
+            <td><strong>Director:</strong></td>
+            <td>Sumeet Malik 0425 454 253 <a href="mailto:sumeet.malik@empiresecurityservices.com.au">sumeet.malik@empiresecurityservices.com.au</a></td>
+        </tr>
+        <tr>
+            <td><strong>Director:</strong></td>
+            <td>Sushant Malik 0426 479 711 <a href="mailto:sushant.malik@empiresecurityservices.com.au">sushant.malik@empiresecurityservices.com.au</a></td>
+        </tr>
+    </table>
+
+
+
+</div>
+<div class="inner_page2">
+    <p>To find out more about Empire Security Services or to get a quick quote fill in this form and one of our friendly experts will respond to your query shortly.</p>
+    <table>
+        <tr>
+            <td>Name:<br /> @Html.TextBoxFor(m => m.Name)</td>
+            <td>Email:<br />@Html.TextBoxFor(m => m.EmailAddress)</td>
+        </tr>
+        <tr>
+            <td>Phone:<br />@Html.TextBoxFor(m => m.ContactNo)</td>
+            <td>Message:<br />@Html.TextAreaFor(m => m.Message)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="Submit" /></td>
+        </tr>
+    </table>
+</div>
+

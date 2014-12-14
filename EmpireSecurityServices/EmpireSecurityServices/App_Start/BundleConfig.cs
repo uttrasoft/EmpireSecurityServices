@@ -28,9 +28,15 @@ namespace EmpireSecurityServices
                 "~/Scripts/SkypeC2CTelemetry.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquerui").Include(
+                "~/Scripts/jquery.ui.totop.js",
+                "~/Scripts/easing.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      //"~/Content/bootstrap.css",
+                     // "~/Content/site.css",
+                      "~/Content/style.css",
+                      "~/Cotent/ui.totop.css"));
         }
     }
 }
