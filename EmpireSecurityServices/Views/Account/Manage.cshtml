@@ -1,0 +1,408 @@
+﻿@using EmpireSecurityServices.Models;
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div class="row">
+    <div class="col-md-12">
+        @if (ViewBag.HasLocalPassword)
+        {
+            @Html.Partial("_ChangePasswordPartial")
+        }
+        else
+        {
+            @Html.Partial("_SetPasswordPartial")
+        }
+
+        <section id="externalLogins">
+            @Html.Action("RemoveAccountList")
+            @Html.Partial("_ExternalLoginsListPartial", new { Action = "LinkLogin", ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<!-- saved from url=(0041)http://www.empiresecurityservices.com.au/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="UTF-8">
+
+    <title>ESS | Home</title>
+    <link href="./ESS   Home_files/css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://www.empiresecurityservices.com.au/custom.css">
+
+    <link rel="stylesheet" href="http://www.empiresecurityservices.com.au/style.css">
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <script src="./ESS   Home_files/jquery-1.10.2.js"></script>
+
+    <script src="./ESS   Home_files/jquery-ui.js"></script>
+
+    <style data-c2c="c2c_print_container_style" media="print" type="text/css">
+        span.skype_c2c_print_container {
+        }
+
+        span.skype_c2c_container {
+            display: none !important;
+        }
+
+        .skype_c2c_menu_container {
+            display: none !important;
+        }
+    </style>
+    <script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/telemetry.js"></script>
+    <script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/menu_handler.js"></script>
+</head>
+
+<body id="wrapper">
+
+    <div class="" style="margin: 0 auto;position: relative;">
+        <img style="width: 100%;min-height: 500px;" class="bc2" src="./ESS   Home_files/security_cover.jpg">
+
+        <div style="text-align: center;text-align: center;position: absolute;width: 100%;top: 0px;height: 100%;">
+
+            <header>
+
+                <nav>
+
+                    <div class="wrapper-inner text-center">
+
+                        <div class="header home" id="header">
+
+                            <div class="myrow clearfix" style="padding-bottom: 24px;">
+
+                                <div class="three columns logo-container" style="text-align: left;">
+
+                                    <a href="http://www.empiresecurityservices.com.au/index.php">
+                                        <img src="./ESS   Home_files/ESSLOGO2.png" width="150" alt="Taste To Taste" style="border-radius: 5px;">
+                                    </a>
+                                </div>
+                                <div class="nine columns toggle-jump main-nav" style="padding-top: 12px;">
+                                    <ul class="nav right">
+                                        <li class="pricing"><a href="http://www.empiresecurityservices.com.au/about.php">ABOUT US</a></li>
+                                        <li class="pricing"><a href="http://www.empiresecurityservices.com.au/career.php">CAREER</a></li>
+                                        <li class="pricing"><a href="http://www.empiresecurityservices.com.au/services.php">SERVICES</a></li>
+                                        <li class="sign-up"><a href="http://www.empiresecurityservices.com.au/contact.php" class="btn btn-raised">CONTACT US</a></li>
+                                        <li class="sign-up" style="background: #3E3A3A;border-radius: 3px;">
+                                            <a href="https://www.facebook.com/EssActCanberra" target="_blank" class="" style="padding: 0;display: block;border-radius: 7px;">
+                                                <img src="./ESS   Home_files/facebook-con.png" style="height: 41px;margin-right: 8px;">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div style="margin-top: 50px;">
+                <h1 style="color: #fff">Securing Your Business is Our Business</h1>
+                <p style="color: rgba(255, 255, 255, 0.48);width: 47%;text-align: center;margin: 0 auto;padding-top: 10px;">We pride ourselves on being very different from standard security providers. The difference is in the quality of the people we employ.</p>
+                <br><br>
+                <a href="" class="btn btn-raised" style="background: rgb(191,191,191) !important;width: 125px;">MORE</a>
+            </div>
+        </div>
+    </div>
+    <section class="" style="position: relative;background: #fff;padding-bottom: 0px;">
+        <div style="text-align:center;" class="myrow">
+            <div class="section-title">Providing Prestige, Top Quality Security Solutions</div>
+            <div class="section-subtitle">We are dedicated to providing safe, reliable and efficient means of protecting people and property.</div>
+            <!--                    One of the foundations upon which we have built our business is our commitment to service excellence and our customers’ needs are our highest priority.
+                            We have recognised the need to develop more specialised teams who would have the advantage of understanding a niche market sector, thereby making them more effective in their service delivery. This is one of the many reasons, that we are making huge inroads in a very competitive environment.-->
+        </div>
+    </section>
+
+    <section class="myrow qualities" style="border-top: 1px solid #E6E6E6;padding-top: 60px;">
+        <div style="margin: 0 auto;width: 990px;" class="clearfix">
+            <div class="five fl" style="margin-bottom: 40px;margin-right: 70px;">
+                <div class="fl one" style="width: 86px;">
+                    <img class="so-box-img fr" src="./ESS   Home_files/img2.png" alt="">
+                </div>
+                <div class="fit fl four" style="width: 325.6666px !important;">
+                    <h4>Outstanding Service</h4>
+                    <p>We see ourselves as business partners, not merely service providers. Client Service is one of the core values of our company. </p>
+                </div>
+            </div>
+            <div class="five fl" style="margin-bottom: 40px;">
+                <div class="fl one" style="width: 86px;">
+                    <img style="border-radius: 10px;width: 74px;height: 101px" class="so-box-img fr" src="./ESS   Home_files/secuity.png" alt="">
+                </div>
+                <div class="fit fl four" style="width: 325.6666px !important;">
+                    <h4>Company Staff</h4>
+                    <p>All Company staff assigned to our client’s sites is fully trained to fulfil a vital role in the service required by our client.</p>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="five fl" style="margin-bottom: 40px;margin-right: 70px;">
+                <div class="fl one" style="width: 86px;">
+                    <img class="so-box-img fr" src="./ESS   Home_files/img3.png" alt="">
+                </div>
+                <div class="fit fl four" style="width: 325.6666px !important;">
+                    <h4>Client Needs</h4>
+                    <p>Prior to commencing our service, we will liaise with the client to identify and discuss individual needs. </p>
+                </div>
+            </div>
+            <div class="five" style="float: left">
+                <div class="fl one" style="width: 86px;">
+                    <img style="border-radius: 10px;width: 74px;height: 101px" class="so-box-img fr" src="./ESS   Home_files/super_secuity.png" alt="">
+                </div>
+                <div class="fit fl four" style="width: 325.6666px !important;">
+                    <h4>Super Security</h4>
+                    <p>We will remove worries for clients who require security guards for their buildings, facilities, and events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-twitter" style="background: #2D3F51;text-align: center;">
+        <div class="div-twitter">
+            <div class="mid">
+                <div id="tweet_fader_widget-2" class="widget-wrapper widget_tweet_fader_widget">
+                    <h3 class="widget-title" style="font-size: 1.75em;color: #FFF;line-height: 125%;font-weight: normal;padding: 0;width: 100%;">We are hiring, <a href="http://www.empiresecurityservices.com.au/career.php" style="color:#1ABC9C;text-decoration: none;">apply now!</a></h3>
+                    <div id="tweets">
+                        <p class="tweet_1qvH" style="opacity: 1; display: none;"><br><span>10 hours ago</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="text-align: center;background: #ECF0F1;">
+        <div class="myrow">
+            <div class="mid" style="">
+                <div id="section-two-tabs">
+                    <ul id="tab-nav" class="tabs-menu">
+                        <li class="current"><a href="http://www.empiresecurityservices.com.au/#tab-1" class="currentSelect">Mobile Patrolling</a></li>
+                        <li class=""><a href="http://www.empiresecurityservices.com.au/#tab-2" class="">Static Guard</a></li>
+                        <li class=""><a href="http://www.empiresecurityservices.com.au/#tab-3" class="">Crowd Control</a></li>
+                        <li><a href="http://www.empiresecurityservices.com.au/#tab-4">Construction Site</a></li>
+                    </ul>
+                    <div id="tab-container" style="height: 475px;">
+                        <div class="tab">
+                            <div id="tab-1" class="tab tab-content" style="display: none;">
+                                <div class="four fl">
+                                    <h2 style="text-align: left;">Night-time surveillance</h2>
+                                    <div class="entry">
+                                        <ul style="text-align: left;">
+                                            <li>Patrol areas, check for unauthorised entry</li>
+                                            <li>Watch for irregularities</li>
+                                            <li>Record times of inspections</li>
+                                            <li>Check and respond to alarms</li>
+                                            <li>Provide armed escort</li>
+                                            <li>Observe and report suspects to police</li>
+                                            <li>Check travellers and their hand luggage</li>
+                                        </ul>
+                                        <p style="text-align: left;"><a style="color: inherit;text-decoration: none;" href="http://www.empiresecurityservices.com.au/services.php">Learn more</a></p>
+                                    </div>
+                                </div>
+                                <div class="eight fl">
+                                    <img style="width: 100%;" src="./ESS   Home_files/financial_solutions-1.jpg">
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab tab-content" style="display: none;">
+                                <div class="four fl">
+                                    <h2 style="text-align: left;">Static guards services</h2>
+                                    <div class="entry">
+                                        <ul style="text-align: left;">
+                                            <li>Entry gate operation and access control</li>
+                                            <li>Identity Verification</li>
+                                            <li>Vehicle inspection</li>
+                                            <li>Anti-sabotage checks</li>
+                                            <li>Security of materials</li>
+                                            <li>Materials movement control</li>
+                                            <li>Guarding of vital installations</li>
+                                        </ul>
+                                        <p style="text-align: left;"><a style="color: inherit;text-decoration: none;" href="http://www.empiresecurityservices.com.au/services.php">Learn more</a></p>
+                                    </div>
+                                </div>
+                                <div class="eight fl">
+                                    <img style="width: 100%;" src="./ESS   Home_files/public_sector.jpg">
+                                </div>
+                            </div>
+
+                            <div id="tab-3" class="tab tab-content" style="display: none;">
+                                <div class="four fl">
+                                    <h2 style="text-align: left;">Security and crowd control</h2>
+                                    <div class="entry">
+                                        <ul style="text-align: left;">
+                                            <li>Monitor all patrons entering the premises</li>
+                                            <li>Accept the approved form of identification </li>
+                                            <li>Conducting a count of patrons</li>
+                                            <li>Ensure patrons meet the dress standards</li>
+                                            <li>Security of materials</li>
+                                            <li>Materials movement control</li>
+                                            <li>Check travellers and their hand luggage</li>
+                                        </ul>
+                                        <p style="text-align: left;"><a style="color: inherit;text-decoration: none;" href="http://www.empiresecurityservices.com.au/services.php">Learn more</a></p>
+                                    </div>
+                                </div>
+                                <div class="eight fl">
+                                    <img style="width: 100%;" src="./ESS   Home_files/financial_solutions.jpg">
+                                </div>
+                            </div>
+                            <div id="tab-4" class="tab tab-content" style="display: block;">
+                                <div class="four fl">
+                                    <h2 style="text-align: left;">Construction site</h2>
+                                    <div class="entry">
+                                        <ul style="text-align: left;">
+                                            <li>Know your customer forms</li>
+                                            <li>Quotes and proposals</li>
+                                            <li>Statements of advice</li>
+                                            <li>Regulatory reporting</li>
+                                            <li>Employment contracts</li>
+                                            <li>Financial statements</li>
+                                            <li>Loan applications</li>
+                                        </ul>
+                                        <p style="text-align: left;"><a style="color: inherit;text-decoration: none;" href="http://www.empiresecurityservices.com.au/services.php">Learn more</a></p>
+                                    </div>
+                                </div>
+                                <div class="eight fl">
+                                    <img style="width: 100%;" src="./ESS   Home_files/trade_manufacturing.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background: #F8F8F9;border-bottom: 1px solid #C7C7C7;">
+        <div class="myrow">
+            <div style="text-align:center;">
+                <div class="section-title">What our clients are saying</div>
+                <div class="section-subtitle">ASIAL is the largest security industry Association representing the security industry in Australia.</div>
+                <div class="row learn indented marginBottom100" style="border-top: 1px solid #E6E6E6;">
+                    <ul class="clearfix testinomial">
+                        <li>
+                            <div class="quote" style="min-height: 130px;">We used empire security for birthday party and their security team took extra care to maintain a friendly environment throughout the event.</div><img src="./ESS   Home_files/testimonial_bottom_light.png">
+                            <div>
+                                <ul class="testinomialPeople clearfix">
+                                    <li class="">
+                                        <span class="fl" style="vertical-align: middle;margin-right: 20px;">
+                                            <img src="./ESS   Home_files/TestimonalFace1.png" style="width: 60px;height: 60px;">
+                                        </span>
+                                        <h4 class="fl" style="padding: 0;vertical-align: middle;font-size:16px;color:#384047;font-weight:bold;">
+                                            Vanessa
+                                            <div style="font-weight: normal;color: #8c989e;">Student</div>
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="quote">Their service is excellent and all their staff are courteous and conscientious in carrying out their duties.Personnel are punctual and provide us with the excellent report. </div><img src="./ESS   Home_files/testimonial_bottom_light.png">
+                            <div>
+                                <ul class="testinomialPeople clearfix">
+                                    <li class="">
+                                        <span class="fl" style="vertical-align: middle;margin-right: 20px;">
+                                            <img src="./ESS   Home_files/TestimonalFace2.png" style="width: 60px;height: 60px;">
+                                        </span>
+                                        <h4 class="fl" style="padding: 0;vertical-align: middle;font-size:16px;color:#384047;font-weight:bold;">
+                                            Sonika Kaliraman
+                                            <div style="font-weight: normal;color: #8c989e;">Accountant</div>
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="quote">We are very satisfied with the level of care and professional services they have providing and we will continue to use Empire Security Services on further events.</div><img src="./ESS   Home_files/testimonial_bottom_light.png">
+                            <div>
+                                <ul class="testinomialPeople clearfix">
+                                    <li class="">
+                                        <span class="fl" style="vertical-align: middle;margin-right: 20px;">
+                                            <img src="./ESS   Home_files/TestimonalFace3.png" style="width: 60px;height: 60px;">
+                                        </span>
+                                        <h4 class="fl" style="padding: 0;vertical-align: middle;font-size:16px;color:#384047;font-weight:bold;">
+                                            Javad Babaei
+                                            <div style="font-weight: normal;color: #8c989e;">Information Technology</div>
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="myrow">
+        <div style="text-align:center;">
+            <div class="section-title">Verified by security Associations in Australia</div>
+            <div class="section-subtitle">ASIAL is the largest security industry Association representing the security industry in Australia.</div>
+            <div id="fred_container">
+                <div class="caroufredsel_wrapper">
+                    <ul class="fredSel clearfix" style="text-align:center;padding: 0;">
+                        <li style="width: 214px;margin: 0 auto;"><img style="height: 120px;" src="./ESS   Home_files/Asial_Logo.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-twitter" style="background: #2D3F51;text-align: center;">
+        <div class="div-twitter">
+            <div class="mid">
+                <span id="random-load">
+                    <span class="h4" style="display: inline;font-size: 30px;color: #FFF;font-weight: 400;">Reduce risk and improve compliance</span>
+                </span>
+                <a href="http://www.empiresecurityservices.com.au/contact.php" class="promolink">GET IN TOUCH</a>
+            </div>
+        </div>
+    </section>
+    <footer style="padding: 80px 0;color: #666;text-align: center;">
+        <div class="myrow">
+            <div style="display:inline-block">
+                <ul class="footer_nav nav clearfix" style="padding: 0;margin: 0;">
+                    <li><a href="./ESS   Home_files/ESS   Home.html">Home</a></li>
+                    <li><a href="http://www.empiresecurityservices.com.au/about.php">ABOUT</a></li>
+                    <li><a href="http://www.empiresecurityservices.com.au/career.php">CAREER</a></li>
+                    <li><a href="http://www.empiresecurityservices.com.au/services.php">SERVICES</a></li>
+                    <li><a href="http://www.empiresecurityservices.com.au/contact.php">CONTACT US</a></li>
+                </ul>
+            </div>
+            <br><br>
+            <div class="contact" style="">
+                <b>Contact Us</b>
+                <br>
+                <p>
+                    228 Kerrigan St, Dunlop, Canberra, ACT 2615<br>
+                    p. <span class="skype_c2c_print_container notranslate">+61426479711</span><span id="skype_c2c_container" class="skype_c2c_container notranslate" dir="ltr" tabindex="-1" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" onclick="SkypeClick2Call.MenuInjectionHandler.makeCall(this, event)" data-numbertocall="+61426479711" data-isfreecall="false" data-isrtl="false" data-ismobile="false"><span class="skype_c2c_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_c2c_textarea_span" id="non_free_num_ui"><img width="0" height="0" class="skype_c2c_logo_img" src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/call_skype_logo.png"><span class="skype_c2c_text_span">+61426479711</span><span class="skype_c2c_free_text_span"></span></span></span></span>, <span class="skype_c2c_print_container notranslate">+61425454253</span><span id="skype_c2c_container" class="skype_c2c_container notranslate" dir="ltr" tabindex="-1" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" onclick="SkypeClick2Call.MenuInjectionHandler.makeCall(this, event)" data-numbertocall="+61425454253" data-isfreecall="false" data-isrtl="false" data-ismobile="false"><span class="skype_c2c_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_c2c_textarea_span" id="non_free_num_ui"><img width="0" height="0" class="skype_c2c_logo_img" src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/call_skype_logo.png"><span class="skype_c2c_text_span">+61425454253</span><span class="skype_c2c_free_text_span"></span></span></span></span><br>
+                    e. <a style="text-decoration: none;color: inherit;" href="mailtio:info@empiresecurityservices.com.au">info@empiresecurityservices.com.au</a><br>
+                    Fax. +61(0)261470365<br>
+                    ABN. 75601706156<br>
+                    ACT MASTER LICENSE:17502305
+                    <br><br>
+                </p>
+            </div>
+            <br>
+            <br>
+        </div>
+    </footer>
+    <div class="clearfix" style="background: #0F1923;"><p class="myrow" style="padding-top: 30px;padding-bottom: 30px;font-size: inherit;"><span style="text-align: left;"><span>EMPIRE SECURITY SERVICES © 2014 All rights reserved</span></span><span style="float: right;text-align: center;border-top: 1px solid #ccc;display: inline-flex;border-top-style: dotted;padding-top: 9px;">Website Designed by <a target="_blank" style="text-decoration: none;background: #666;color: rgb(10, 255, 0);width: 34px;margin-left: 6px;margin-top: -4px;height: 32px;padding-top: 4px;border-top: 3px solid #000" href="http://its-raj.com/" rel="nofollow">&nbsp;RAJ</a></span></p></div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".tabs-menu a").click(function (event) {
+                event.preventDefault();
+                $(this).parent().addClass("current");
+                $(this).parent().siblings().removeClass("current");
+                var tab = $(this).attr("href");
+                $(".tab-content").not(tab).css("display", "none");
+                $(tab).fadeIn();
+                $(".tabs-menu a").attr("class", "");
+                $(this).attr("class", "currentSelect");
+            });
+        });
+    </script>
+    <div class="skype_c2c_menu_container notranslate" id="skype_c2c_menu_container" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" data-fp="{5140D077-5297-43D4-BCAC-B8B0D1B47241}" data-murl="https://pipe.skype.com/Client/2.0/" data-uiid="0" style="display: none;"><div class="skype_c2c_menu_click2call"><a class="skype_c2c_menu_click2call_action" id="skype_c2c_menu_click2call_action" target="_self">Call</a></div><div class="skype_c2c_menu_click2sms"><a class="skype_c2c_menu_click2sms_action" id="skype_c2c_menu_click2sms_action" target="_self">Send SMS</a></div><div class="skype_c2c_menu_add2skype"><a class="skype_c2c_menu_add2skype_text" id="skype_c2c_menu_add2skype_text" target="_self">Add to Skype</a></div><div class="skype_c2c_menu_toll_info"><span class="skype_c2c_menu_toll_callcredit">You'll need Skype Credit</span><span class="skype_c2c_menu_toll_free">Free via Skype</span></div></div>
+</body>
+</html>
