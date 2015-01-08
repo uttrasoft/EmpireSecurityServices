@@ -49,7 +49,7 @@ namespace EmpireSecurityServices.Controllers
                     smtp.Send(mail);
                     return RedirectToAction("Success", "Response", new { pageType = "Contact" });
                 }
-                catch(Exception ex)
+                catch(Exception)
                 {
                     return RedirectToAction("Failure", "Response");
                 }

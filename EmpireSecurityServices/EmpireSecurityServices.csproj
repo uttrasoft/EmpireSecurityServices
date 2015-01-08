@@ -175,6 +175,7 @@
     <Content Include="audio\beep.mp3" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style - Copy.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\ui.totop.css" />
     <Content Include="favicon.ico" />
@@ -239,6 +240,7 @@
     <Content Include="fonts\iadKCBVahjA5ul3LDhwH7A.woff2" />
     <Content Include="fonts\ovPqj5yHJvE65V38pSjaNfY6323mHUZFJMgTvxaG2iE.woff2" />
     <Content Include="audio\beep.ogg" />
+    <None Include="Properties\PublishProfiles\empiresecurity.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\jquery-1.10.1.min.js" />

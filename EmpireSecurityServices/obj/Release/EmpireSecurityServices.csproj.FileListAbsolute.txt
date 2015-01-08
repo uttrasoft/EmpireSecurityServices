@@ -50,6 +50,5 @@ G:\EmpireSecurityServices\EmpireSecurityServices\bin\Microsoft.Owin.Security.OAu
 G:\EmpireSecurityServices\EmpireSecurityServices\bin\Microsoft.Owin.Security.Google.xml
 G:\EmpireSecurityServices\EmpireSecurityServices\bin\Microsoft.Owin.Security.Twitter.xml
 G:\EmpireSecurityServices\EmpireSecurityServices\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-G:\EmpireSecurityServices\EmpireSecurityServices\obj\Debug\EmpireSecurityServices.dll
-G:\EmpireSecurityServices\EmpireSecurityServices\obj\Debug\EmpireSecurityServices.pdb
-G:\EmpireSecurityServices\EmpireSecurityServices\obj\Debug\EmpireSecurityServices.csprojResolveAssemblyReference.cache
+G:\EmpireSecurityServices\EmpireSecurityServices\obj\Release\EmpireSecurityServices.dll
+G:\EmpireSecurityServices\EmpireSecurityServices\obj\Release\EmpireSecurityServices.pdb
