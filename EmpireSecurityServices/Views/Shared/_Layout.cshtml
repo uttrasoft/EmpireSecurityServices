@@ -8,59 +8,48 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
     @Scripts.Render("~/bundles/skypejs")
     @Scripts.Render("~/bundles/jquerui")
     <script type="text/javascript">
-        function slideSwitch() {
-            var $active = $('#slideshow IMG.active');
-            if ($active.length == 0) $active = $('#slideshow IMG:last');
-            var $next = $active.next().length ? $active.next()
-                : $('#slideshow IMG:first');
-            $active.addClass('last-active');
+    function slideSwitch() {
+        var $active = $('#slideshow IMG.active');
+        if ($active.length == 0) $active = $('#slideshow IMG:last');
+        var $next = $active.next().length ? $active.next()
+			: $('#slideshow IMG:first');
+        $active.addClass('last-active');
 
-            $next.css({ opacity: 0.0 })
-                .addClass('active')
-                .animate({ opacity: 1.0 }, 1000, function () {
-                    $active.removeClass('active last-active');
-                });
+        $next.css({ opacity: 0.0 })
+			.addClass('active')
+			.animate({ opacity: 1.0 }, 1000, function () {
+			    $active.removeClass('active last-active');
+			});
+        var activeIndex = $('#slideshow IMG.active').attr("data-index-val");
+        if (activeIndex == 2) {
+            $('#banner .banner_text h2').text('Our Clients Are At The Center Of What We Do').css({"padding-top":"2px;"});
         }
-        $(function () {
-            setInterval("slideSwitch()", 5000);
-        });
+        else {
+            $('#banner .banner_text h2').text('Securing Your Bussiness is Our Bussiness');
+        }
+    }
+    $(function () {
+        setInterval("slideSwitch()", 5000);
+    });
     </script>
-
-
-    <!-----page scroll smooth----->
-    <script>
-        if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-        window.onmousewheel = document.onmousewheel = wheel;
-
-        function wheel(event) {
-            var delta = 0;
-            if (event.wheelDelta) delta = event.wheelDelta / 120;
-            else if (event.detail) delta = -event.detail / 3;
-
-            handle(delta);
-            if (event.preventDefault) event.preventDefault();
-            event.returnValue = false;
-        }
-
-        function handle(delta) {
-            var time = 1000;
-            var distance = 300;
-
-            $('html, body').stop().animate({
-                scrollTop: $(window).scrollTop() - (distance * delta)
-            }, time);
-        }
-    </script>
-    <!----Bottom to Top---->
-    <link rel="stylesheet" media="screen,projection" href="~/Content/ui.totop.css" />
     <script type="text/javascript">
         $(document).ready(function () {
             $().UItoTop({ easingType: 'easeOutQuart' });
+
         });
+
+        $(function () {
+            $('.navigation ul li a').click(function () {
+                //debugger;
+                //$('.navigation ul li a').removeClass('active');
+                //$(this).addClass('active');
+            });
+        });
+
     </script>
 </head>
 <body>
@@ -69,36 +58,39 @@
             <div class="navigation">
                 <ul id="nav-one">
                     <li>
-                        <a class="active" href="@Url.Action("Index","Home")">Home</a>
+                        <a class="active" href="@Url.Action("Index","Home")">HOME</a>
                         <audio id="beep-one" controls preload="auto">
                             <source src="audio/beep.mp3">
                             <source src="audio/beep.ogg">
                             Your browser isn't invited for super fun time.
                         </audio>
                     </li>
-                    <li><a href="@Url.Action("About","Home")">About Us</a></li>
-                    <li><a href="@Url.Action("Career","Home")">Career</a></li>
-                    <li><a href="@Url.Action("Services","Home")">Services</a></li>
-                    <li><a href="@Url.Action("StretgySummary", "Home")">Strategy &amp; Summary</a></li>
-                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li><a href="@Url.Action("About","Home")">ABOUT US</a></li>
+                    <li><a href="@Url.Action("Career","Home")">CAREER</a></li>
+                    <li><a href="@Url.Action("Services","Home")">SERVICES</a></li>
+                    <li><a href="@Url.Action("StretgySummary", "Home")">STRATRGY &amp; SUMMARY</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">CONTACT US</a></li>
                 </ul>
+                <script>
+var beepOne = $("#beep-one")[0];
+    $("#nav-one a")
+        .mouseenter(function () {
+            beepOne.play();
+        });
+                </script>
                </div>
         </div>
         <div id="header">
             <div class="header">
-                <div class="logo"><a href="#"><img src="~/images/ESSLOGO2.png" alt="" /></a></div>
-                <div>
-                    <p><img src="~/images/phone_icon.png" alt="" />+61426479711, +61425454253</p>
-                    <p><img src="~/images/email_icon.png" alt="" />info@empiresecurityservices.com.au</p>
-                    <p><img src="~/images/fax_icon.png" alt="" />+61(0)261470365</p>
-                </div>
+                <div class="logo"><a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/images/ESSLOGO2.png")" alt="" /></a></div> 
+
             </div>
         </div>
         <div id="slideshow">
-            <img src="~/images/security_cover.jpg" alt="Slideshow Image 1" class="active" />
-            <img src="~/images/security_cover2.jpg" alt="Slideshow Image 2" />
-            <img src="~/images/security_cover3.jpg" alt="Slideshow Image 3" />
-            <img src="~/images/security_cover4.jpg" alt="Slideshow Image 4" />
+            <img src="~/images/security_cover.jpg" alt="Slideshow Image 1" class="active"  data-index-val="1"/>
+            <img src="~/images/security_cover2.jpg" alt="Slideshow Image 2" data-index-val="2" />
+            <img src="~/images/security_cover3.jpg" alt="Slideshow Image 3" data-index-val="3" />
+            <img src="~/images/security_cover4.jpg" alt="Slideshow Image 4" data-index-val="4" />
         </div>
         <div id="banner">
             <div class="banner_text">
@@ -138,7 +130,7 @@
                 <strong>Verified by security Associations in Australia</strong>
                 <p>ASIAL is the largest security industry Association representing the security industry in Australia.</p>
                 <div class="contact1">
-                    <b>228 Kerrigan St, Dunlop, Canberra, ACT 2615</b><br />
+                    <b>PO Box 467, Kippax, ACT 2615</b><br />
                     <b>Phone:</b> +61426479711, +61425454253<br />
                     <b>Email:</b> info@empiresecurityservices.com.au<br />
                     <b>Fax:</b> +61(0)261470365<br />
@@ -150,7 +142,7 @@
         </div>
         <div id="footer">
             <div class="footer">
-                <p>EMPIRE SECURITY SERVICES © 2014 All rights reserved</p>
+                <p>EMPIRE SECURITY SERVICES © @DateTime.Now.Year All rights reserved</p>
                 <ul>
                     <li><a href="https://www.facebook.com/EssActCanberra" target="_blank" title="Facebook"><img src="~/images/social/facebook.png" alt="" /></a></li>
                     <li><a href="#"><img src="~/images/social/twitter.png" alt="" /></a></li>

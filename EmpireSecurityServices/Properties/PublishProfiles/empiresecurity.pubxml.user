@@ -10,16 +10,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="audio/beep.mp3">
-      <publishTime>07/12/2014 19:30:05</publishTime>
+      <publishTime>12/07/2014 19:30:05</publishTime>
     </File>
     <File Include="audio/beep.ogg">
-      <publishTime>07/12/2014 19:30:05</publishTime>
+      <publishTime>12/07/2014 19:30:05</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/14/2014 21:30:43</publishTime>
     </File>
     <File Include="bin/EmpireSecurityServices.dll">
-      <publishTime>01/08/2015 21:18:29</publishTime>
+      <publishTime>02/02/2015 11:59:22</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/14/2014 21:30:46</publishTime>
@@ -103,13 +103,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 21:30:29</publishTime>
     </File>
     <File Include="Content/style - Copy.css">
-      <publishTime>07/12/2014 19:18:25</publishTime>
+      <publishTime>02/02/2015 10:13:38</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>12/26/2014 20:42:47</publishTime>
+      <publishTime>02/02/2015 11:20:35</publishTime>
     </File>
     <File Include="Content/ui.totop.css">
-      <publishTime>07/12/2014 19:18:25</publishTime>
+      <publishTime>02/01/2015 21:01:09</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>11/14/2014 21:30:17</publishTime>
@@ -142,160 +142,160 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 21:30:17</publishTime>
     </File>
     <File Include="images/accreditation.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/active.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/bg.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/bg1.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/career.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/client_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/client_need_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/competitive.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/comtainer_top.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/contact.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/email_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/ESSLOGO2.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/executive.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/fax_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/24hr.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/Asial_Logo.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/bday.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/constructionsecurity.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/crowd_control.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/event-security.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/loss.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/mobile-patrol.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/guards/static_guard.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/keys.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/li.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/management.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/map.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/marketing.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/mission.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/nav.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/nav_hover.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:51</publishTime>
     </File>
     <File Include="images/outstanding.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:51</publishTime>
     </File>
     <File Include="images/phone_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:51</publishTime>
     </File>
     <File Include="images/sales.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:51</publishTime>
     </File>
     <File Include="images/security_cover.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:51</publishTime>
     </File>
     <File Include="images/security_cover2.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:51</publishTime>
     </File>
     <File Include="images/security_cover3.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/security_cover4.jpg">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/security_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/service.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/services_icon.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/social/facebook.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/social/googleplus.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/social/linkedin.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/social/rss.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/social/skype.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/social/twitter.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:50</publishTime>
     </File>
     <File Include="images/strategy.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/TestimonalFace1.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/TestimonalFace2.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/TestimonalFace3.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="images/ui.totop.png">
-      <publishTime>07/12/2014 18:27:18</publishTime>
+      <publishTime>02/01/2015 21:01:47</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>11/14/2014 21:30:53</publishTime>
@@ -307,10 +307,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 21:30:28</publishTime>
     </File>
     <File Include="Scripts/easing.js">
-      <publishTime>07/12/2014 19:20:01</publishTime>
+      <publishTime>12/07/2014 19:20:01</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.1.min.js">
-      <publishTime>07/12/2014 19:51:03</publishTime>
+      <publishTime>12/07/2014 19:51:03</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>11/14/2014 21:30:30</publishTime>
@@ -322,7 +322,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 21:30:30</publishTime>
     </File>
     <File Include="Scripts/jquery.ui.totop.js">
-      <publishTime>07/12/2014 19:20:01</publishTime>
+      <publishTime>12/07/2014 19:20:01</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>11/14/2014 21:30:53</publishTime>
@@ -352,7 +352,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/16/2014 17:34:12</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>07/12/2014 19:51:03</publishTime>
+      <publishTime>12/07/2014 19:51:03</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>11/14/2014 21:30:45</publishTime>
@@ -382,13 +382,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 21:30:45</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>12/18/2014 22:04:01</publishTime>
+      <publishTime>02/02/2015 11:26:00</publishTime>
     </File>
     <File Include="Views/Home/Career.cshtml">
       <publishTime>12/18/2014 22:07:24</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>12/14/2014 12:11:45</publishTime>
+      <publishTime>01/31/2015 22:22:03</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>12/14/2014 12:49:10</publishTime>
@@ -412,7 +412,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/16/2014 18:12:32</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/26/2014 20:45:25</publishTime>
+      <publishTime>02/02/2015 11:42:43</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/14/2014 21:30:45</publishTime>
@@ -424,7 +424,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 21:30:17</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/08/2015 21:29:52</publishTime>
+      <publishTime>02/02/2015 11:59:23</publishTime>
     </File>
   </ItemGroup>
 </Project>

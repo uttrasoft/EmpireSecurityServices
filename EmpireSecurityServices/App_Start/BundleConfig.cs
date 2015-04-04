@@ -33,8 +33,8 @@ namespace EmpireSecurityServices
                 "~/Scripts/easing.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      //"~/Content/bootstrap.css",
-                     // "~/Content/site.css",
+                      "~/Content/style - Copy.css",
+                      "~/Content/ui.totop.css",
                       "~/Content/style.css",
                       "~/Cotent/ui.totop.css"));
         }

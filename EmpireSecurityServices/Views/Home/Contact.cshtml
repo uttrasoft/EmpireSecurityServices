@@ -1,10 +1,12 @@
 ﻿@model EmpireSecurityServices.Models.Contact
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "contactform" }))
+{
 
 <div class="inner_page">
     <strong class="heading"><img src="~/images/contact.png" />&nbsp;Contact Us</strong>
 
     <div class="contact1">
-        <b>228 Kerrigan St, Dunlop, Canberra, ACT 2615</b><br />
+        <b>PO Box 467, Kippax, ACT 2615</b><br />
         <b>Phone:</b> +61426479711, +61425454253<br />
         <b>Email:</b> info@empiresecurityservices.com.au<br />
         <b>Fax:</b> +61(0)261470365<br />
@@ -18,12 +20,8 @@
             <th colspan="2">EMPIRE SECURITY SERVICES (PTY) LTD.</th>
         </tr>
         <tr>
-            <td><strong>Physical Address:</strong></td>
-            <td>PO Box 467, Kip pax, ACT 2615</td>
-        </tr>
-        <tr>
             <td><strong>Postal Address:</strong></td>
-            <td>PO Box 467, Kip pax, ACT 2615</td>
+            <td>PO Box 467, Kippax, ACT 2615</td>
         </tr>
         <tr>
             <td><strong>Telephone Number:</strong></td>
@@ -36,14 +34,6 @@
         <tr>
             <td><strong>E-Mail Address:</strong></td>
             <td><a href="mailto:info@empiresecurityservices.com.au">info@empiresecurityservices.com.au</a></td>
-        </tr>
-        <tr>
-            <td><strong>Director:</strong></td>
-            <td>Sumeet Malik 0425 454 253 <a href="mailto:sumeet.malik@empiresecurityservices.com.au">sumeet.malik@empiresecurityservices.com.au</a></td>
-        </tr>
-        <tr>
-            <td><strong>Director:</strong></td>
-            <td>Sushant Malik 0426 479 711 <a href="mailto:sushant.malik@empiresecurityservices.com.au">sushant.malik@empiresecurityservices.com.au</a></td>
         </tr>
     </table>
 
@@ -62,8 +52,9 @@
             <td>Message:<br />@Html.TextAreaFor(m => m.Message)</td>
         </tr>
         <tr>
-            <td colspan="2"><input type="button" value="Submit" /></td>
+            <td colspan="2"><input type="submit" value="Submit" /></td>
         </tr>
     </table>
 </div>
+}
 
